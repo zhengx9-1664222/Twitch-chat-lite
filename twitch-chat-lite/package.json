@@ -1,0 +1,7 @@
+{
+  "name": "twitch-chat-lite",
+  "version": "1.0.0",
+  "dependencies": {
+    "react-dom": "^16.13.0"
+  }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> "twitch-chat-lite" </title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+<!--    <header>-->
+<!--        <h1>Twitch-chat-lite</h1>-->
+<!--    </header>-->
+    <main>
+        <div id="server" class="login">
+            <input type="text" id="address" placeholder="Enter websocket address (begin with ws://)"/>
+            <button id="connect" class="btn btn-primary btn-block btn-large"> Connect</button>
+        </div>
+        <div id="userInfo" class="login hidden">
+            <h1>Twitch-chat-lite</h1>
+            <input type="text" id="u" placeholder="Username" required="required" />
+            <input type="text" id="p" placeholder="Room to enter" required="required" />
+            <button id="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>
+        </div>
+<!--        <section id="userInfo">-->
+<!--            <p>Please enter your name: </p><input id="username" type="text">-->
+<!--            <p>Please enter the room you want to join: </p><input id="roomname" type="text">-->
+<!--            <br>-->
+<!--            <br>-->
+<!--            <button id="submit">Submit</button>-->
+<!--        </section>-->
+        <div id="outer">
+            <section id="chat" class="msger hidden">
+                <header class="msger-header">
+                    <div class="msger-header-title">
+                        <i class="fas fa-comment-alt"></i> Chat Bubble
+                    </div>
+                    <div class="msger-header-options">
+                        <span><i class="fas fa-cog"></i></span>
+                    </div>
+                </header>
+
+                <div class="msger-chat1">
+                    <div class="msg left-msg">
+                        <div
+                                class="msg-img"
+                                style="background-image: url(https://image.flaticon.com/icons/svg/327/327779.svg)"
+                        >
+
+                        </div>
+
+                        <div class="msg-bubble">
+                            <div class="msg-info">
+                                <div class="msg-info-name">BOT</div>
+                                <div class="msg-info-time">12:45</div>
+                            </div>
+
+                            <div id="messages" class="msg-text">
+                                Hi, welcome to Channel <span id="c"></span> ! Go ahead and send a message. 😄
+                            </div>
+                        </div>
+                    </div>
+                    <div class="msger-chat">
+
+                    </div>
+
+    <!--                <div class="msg right-msg">-->
+    <!--                    <div-->
+    <!--                            class="msg-img"-->
+    <!--                            style="background-image: url(https://image.flaticon.com/icons/svg/145/145867.svg)"-->
+    <!--                    ></div>-->
+
+    <!--                    <div class="msg-bubble">-->
+    <!--                        <div class="msg-info">-->
+    <!--                            <div class="msg-info-name">Sajad</div>-->
+    <!--                            <div class="msg-info-time">12:46</div>-->
+    <!--                        </div>-->
+
+    <!--                        <div class="msg-text">-->
+    <!--                            You can change your name in JS section!-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+                </div>
+
+                <div class="msger-inputarea">
+                    <input id="textbox" type="text" class="msger-input" placeholder="Enter your message...">
+                    <button id="button" class="msger-send-btn">Send</button>
+                </div>
+            </section>
+        </div>
+<!--        <section id="chat" class="hidden">-->
+<!--            <div id="window">-->
+<!--                <div id="chatHistory">-->
+<!--                    Chat History-->
+<!--                </div>-->
+<!--                <ul id="messages">-->
+
+<!--                </ul>-->
+<!--             </div>-->
+<!--            <input id="textbox" type="text">-->
+<!--            <button id="button">Send</button>-->
+<!--        </section>-->
+    </main>
+    <script type="module" src="TestWebSocket.js">
+    </script>
+</body>
+</html>
